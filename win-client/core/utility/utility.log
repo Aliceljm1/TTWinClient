@@ -1,0 +1,16 @@
+﻿  stdafx.cpp
+  json_reader.cpp
+  json_value.cpp
+  json_writer.cpp
+  CppSQLite3.cpp
+  IniOperation.cpp
+  md5.cpp
+  Multilingual.cpp
+  TTThread.cpp
+  utilCommonAPI.cpp
+  utility.cpp
+  utilStrCodingAPI.cpp
+     正在创建库 E:\Project\GitProject\TeamTalk-master\win-client\solution\..\lib\Release\utility.lib 和对象 E:\Project\GitProject\TeamTalk-master\win-client\solution\..\lib\Release\utility.exp
+  正在生成代码
+  已完成代码的生成
+  utility.vcxproj -> E:\Project\GitProject\TeamTalk-master\win-client\solution\\..\bin\teamtalk\Release\utility.dll
