@@ -1,9 +1,4 @@
-﻿  stdafx.cpp
-  teamtalk.cpp
-  MainDialog.cpp
-  MainDialog_Event.cpp
-  MainDialog_TrayIcon.cpp
-  正在生成代码
+﻿  正在生成代码
   已完成代码的生成
 libprotobuf-lite.lib(common.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(common.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
 libprotobuf-lite.lib(once.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(once.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样

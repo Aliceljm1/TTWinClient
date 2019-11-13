@@ -16,6 +16,8 @@
 #include "Modules/IMessageModule.h"
 #include "Modules/IHttpPoolModule.h"
 #include "Modules/ITcpClientModule.h"
+#include "Modules/IScreenCaptureModule.h"
+
 #include "utility/Multilingual.h"
 #include "utility/utilCommonAPI.h"
 #include "utility/utilStrCodingAPI.h"
@@ -86,11 +88,18 @@ LRESULT LoginDialog::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		return 0;
 	}
+	else if (WM_HOTKEY == uMsg)
+	{
+		OnHotkey(wParam, lParam);
+		return 0;
+	}
 	return WindowImplBase::HandleMessage(uMsg, wParam, lParam);;
 }
 
 void LoginDialog::OnWindowInitialized(TNotifyUI& msg)
 {
+	module::getScreenCaptureModule()->initCapture(m_hWnd);
+
 	m_ptxtTip = (CTextUI*)m_PaintManager.FindControl(_T("tipText"));
 	PTR_VOID(m_ptxtTip);
 	m_pedtUserName = (CEditUI*)m_PaintManager.FindControl(_T("edit_name"));
@@ -202,6 +211,28 @@ void LoginDialog::_DoLogin()
 
 	module::getHttpPoolModule()->pushHttpOperation(pOper);//http请求池，还可以继续封装，只需要指定url,和请求参数，直接返回json
 }
+
+void LoginDialog::OnHotkey(__in WPARAM wParam, __in LPARAM lParam)
+{
+	module::ScreenCaptureHotkeyId emHotkeyId = module::getScreenCaptureModule()->shouldHandle(lParam);
+	if (module::SC_HK_START_CAPTURE == emHotkeyId)
+	{
+		//ctrl + shift + A
+
+		SYSTEMTIME tm = { 0 };
+		GetLocalTime(&tm);
+		CString strFileName;
+		strFileName.Format(_T("%4d%02d%02d%02d%02d%02d.bmp"), tm.wYear, tm.wMonth, tm.wDay, tm.wHour, tm.wMinute, tm.wSecond);
+		CString strFilePath = module::getMiscModule()->getUserTempDir() + strFileName;
+		module::getScreenCaptureModule()->startCapture(strFilePath.GetBuffer(), FALSE);
+	}
+	else if (module::SC_HK_ESCAPE == emHotkeyId)
+	{
+		module::getScreenCaptureModule()->cancelCapture();
+	}
+}
+
+
 void LoginDialog::OnHttpCallbackOperation(std::shared_ptr<void> param)
 {
 	DoLoginServerParam* pParam = (DoLoginServerParam*)param.get();

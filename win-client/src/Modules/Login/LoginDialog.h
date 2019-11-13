@@ -51,6 +51,7 @@ protected:
 	void OnClick(TNotifyUI& msg);
 	void OnTextChanged(TNotifyUI& msg);
 	void OnSetFocus(TNotifyUI& msg);
+	void OnHotkey(__in WPARAM wParam, __in LPARAM lParam);
 private:
 	void _DoLogin();
 	void _Initlize();
