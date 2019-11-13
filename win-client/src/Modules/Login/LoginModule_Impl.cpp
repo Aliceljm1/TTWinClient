@@ -46,7 +46,7 @@ LoginModule_Impl::LoginModule_Impl()
 LoginModule_Impl::~LoginModule_Impl()
 {
 	delete m_pReloginManager;
-	m_pReloginManager = 0;
+	m_pReloginManager = 0; //可以统一调用宏SAFE_DELETE
 }
 
 BOOL LoginModule_Impl::showLoginDialog()

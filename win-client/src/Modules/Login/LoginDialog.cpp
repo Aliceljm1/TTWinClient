@@ -140,6 +140,7 @@ void LoginDialog::OnClick(TNotifyUI& msg)
 	else if (msg.pSender == m_pBtnSysSetting)
 	{
 		module::getSysConfigModule()->showServerConfigDialog(m_PaintManager.GetPaintWindow());
+		//module::getSysConfigModule()->showSysConfigDialog(m_PaintManager.GetPaintWindow());
 		return;
 	}
 	__super::OnClick(msg);
@@ -197,7 +198,9 @@ void LoginDialog::_DoLogin()
 	DoLoginServerParam param;
 	DoLoginServerHttpOperation* pOper = new DoLoginServerHttpOperation(
 		BIND_CALLBACK_1(LoginDialog::OnHttpCallbackOperation), param);
-	module::getHttpPoolModule()->pushHttpOperation(pOper);
+	//绑定http执行成功之后的回调函数到当前dialog的OnHttpCallbackOperation中，回到UI线程
+
+	module::getHttpPoolModule()->pushHttpOperation(pOper);//http请求池，还可以继续封装，只需要指定url,和请求参数，直接返回json
 }
 void LoginDialog::OnHttpCallbackOperation(std::shared_ptr<void> param)
 {

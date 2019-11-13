@@ -5,7 +5,7 @@
   MainDialog_TrayIcon.cpp
   正在生成代码
   已完成代码的生成
-libprotobuf-lite.lib(common.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(common.obj)”或在“E:\Project\GitProject\TeamTalk-master\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libprotobuf-lite.lib(once.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(once.obj)”或在“E:\Project\GitProject\TeamTalk-master\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj)”或在“E:\Project\GitProject\TeamTalk-master\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  teamtalk.vcxproj -> E:\Project\GitProject\TeamTalk-master\win-client\solution\\..\bin\teamtalk\Release\teamtalk.exe
+libprotobuf-lite.lib(common.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(common.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobuf-lite.lib(once.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(once.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(atomicops_internals_x86_msvc.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  teamtalk.vcxproj -> E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\solution\\..\bin\teamtalk\Release\teamtalk.exe
