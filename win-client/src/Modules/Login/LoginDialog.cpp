@@ -223,6 +223,7 @@ void LoginDialog::OnHotkey(__in WPARAM wParam, __in LPARAM lParam)
 		GetLocalTime(&tm);
 		CString strFileName;
 		strFileName.Format(_T("%4d%02d%02d%02d%02d%02d.bmp"), tm.wYear, tm.wMonth, tm.wDay, tm.wHour, tm.wMinute, tm.wSecond);
+		CreateDirectory(module::getMiscModule()->getUserTempDir().GetString(),NULL);//add by ljm 临时创建文件夹
 		CString strFilePath = module::getMiscModule()->getUserTempDir() + strFileName;
 		module::getScreenCaptureModule()->startCapture(strFilePath.GetBuffer(), FALSE);
 	}

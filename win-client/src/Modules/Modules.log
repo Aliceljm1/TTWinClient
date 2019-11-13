@@ -1,5 +1,4 @@
-﻿  LoginDialog.cpp
-     正在创建库 E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\solution\..\lib\Release\Modules.lib 和对象 E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\solution\..\lib\Release\Modules.exp
+﻿     正在创建库 E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\solution\..\lib\Release\Modules.lib 和对象 E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\solution\..\lib\Release\Modules.exp
   正在生成代码
   已完成代码的生成
 libprotobuf-lite.lib(coded_stream.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“libprotobuf-lite.lib(coded_stream.obj)”或在“E:\Project\GitProject\TeamTalk-master\TTWinClient\win-client\bin\teamtalk\Release\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样

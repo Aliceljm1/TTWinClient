@@ -1,6 +1,7 @@
 .vs
 Release
 Debug
+Temp
 
 # Prerequisites
 *.d
